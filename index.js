@@ -50,4 +50,36 @@ function composeFunctions(num) {
   return addFive(double(square(num)));
 }
 
-console.log(composeFunctions(2));
+// console.log(composeFunctions(2));
+
+// 4.Task: Sorting Objects
+// Create an array of objects representing cars with properties like make, model, and year. Write a function to sort the array of cars by the year of manufacture in ascending order. Print the sorted array.
+
+const cars = [
+  { make: "Toyota", model: "Camry", year: 2010 },
+  { make: "Honda", model: "Accord", year: 2008 },
+  { make: "Ford", model: "Mustang", year: 2015 },
+];
+
+const sortCarsByYear = (arr) => arr.sort((a, b) => a.year - b.year);
+
+// console.log(sortCarsByYear(cars));
+
+// 5.Task: Find and Modify
+
+// Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
+
+const persons = [
+  { name: "Alice", age: 25, gender: "female" },
+  { name: "Bob", age: 30, gender: "male" },
+  { name: "Carol", age: 27, gender: "female" },
+  { name: "David", age: 35, gender: "male" },
+];
+
+const modifyPersonAge = (persons, name, newAge) => {
+  return persons.map((person) =>
+    person.name === name ? { ...person, age: newAge } : person
+  );
+};
+
+// console.log(modifyPersonAge(persons, "Carol", 29));
